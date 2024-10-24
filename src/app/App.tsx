@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import routes from "./routes";
 
 const Items = () => {
     const [items, setItems] = useState(null);
@@ -15,7 +16,7 @@ const Items = () => {
     return (
         items && (
             <>
-                <h1>Items</h1>
+                <h1 className="text-3xl text-gray-100">Items</h1>
                 <div>{items}</div>
             </>
         )
@@ -23,12 +24,10 @@ const Items = () => {
 }
 
 export default function App() {
+    const router = createBrowserRouter(routes);
     return (
         <>
-        <h1 className="text-3xl font-bold underline">
-            Hello World!
-        </h1>
-        <Items/>
+            <RouterProvider router={router}/>
         </>
     )
 }
