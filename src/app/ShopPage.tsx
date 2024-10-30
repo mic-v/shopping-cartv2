@@ -1,8 +1,10 @@
-
+import MainLayout from '../layouts/MainLayout'
 export default function ShopPage() {
     return (
         <>
-            <h1>ShopPage</h1>
+            <MainLayout>
+                <h1>Shop</h1>
+            </MainLayout>
         </>
     );
 }
