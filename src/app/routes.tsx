@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./HomePage";
-import ShopPage from "./ShopPage";
+import HomePage from "./routes/HomePage";
+import ShopPage from "./routes/ShopPage";
 
 
 const routes = [
